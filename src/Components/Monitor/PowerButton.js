@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./PowerButton.css";
 
-class SliderButton extends Component {
+class PowerSliderButton extends Component {
   state = {
     clicked: false
   };
@@ -28,4 +28,4 @@ class SliderButton extends Component {
   }
 }
 
-export default SliderButton;
+export default PowerSliderButton;

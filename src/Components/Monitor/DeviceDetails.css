@@ -1,13 +1,13 @@
 .device-info-header {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 1.8rem;
+  display: block;
+  margin: 0;
+  padding: 0 2rem;
 }
 
 .horizontal-line-below-status {
   display: block;
   height: 1px;
-  width: 120%;
+  width: 100%;
   border: 0;
   border-top: 1px solid rgba(140, 141, 135, 0.925);
   margin: 1.33em 0;

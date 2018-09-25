@@ -10,6 +10,9 @@
 }
 
 .slider {
+  display: block;
+  float: right;
+  right: 0;
   position: absolute;
   cursor: pointer;
   top: 0;

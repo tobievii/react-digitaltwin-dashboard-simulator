@@ -10,6 +10,9 @@
 }
 
 .clock-header .clock {
+  display: block;
+  float: right;
+  right: 0;
   font-size: 1.2rem;
   color: #bde6f1;
 }
