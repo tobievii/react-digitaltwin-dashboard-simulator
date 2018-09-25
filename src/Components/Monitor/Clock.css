@@ -1,0 +1,24 @@
+.clock-container {
+  display: block;
+  margin: 2.3rem 2rem;
+}
+
+.clock-header-text {
+  padding-right: 4rem;
+  font-size: 1.4rem;
+  color: rgb(240, 241, 241);
+}
+
+.clock-header .clock {
+  font-size: 1.2rem;
+  color: #bde6f1;
+}
+
+.clock-header .horizontal-line {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1.33em 0;
+  padding: 0;
+}

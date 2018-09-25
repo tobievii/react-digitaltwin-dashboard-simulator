@@ -1,0 +1,25 @@
+.device-info-header {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 1.8rem;
+}
+
+.horizontal-line-below-status {
+  display: block;
+  height: 1px;
+  width: 120%;
+  border: 0;
+  border-top: 1px solid rgba(140, 141, 135, 0.925);
+  margin: 1.33em 0;
+  padding-top: 0;
+}
+
+.device-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: rgb(224, 125, 89);
+}
+
+.device-id {
+  color: #bde6f1;
+}

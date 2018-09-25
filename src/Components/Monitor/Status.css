@@ -1,0 +1,19 @@
+.status-master {
+  display: block;
+}
+
+.status-text .status {
+  padding: 0;
+  font-size: 1.3rem;
+  margin: auto 1.8rem;
+  color: #bde6f1;
+}
+
+.status-text {
+  display: flex;
+}
+
+.power-button {
+  position: fixed;
+  right: 25px;
+}

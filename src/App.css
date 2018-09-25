@@ -1,0 +1,59 @@
+.master-body {
+  display: block;
+}
+
+.master-body .master-controller {
+  position: fixed;
+  float: left;
+  left: 0px;
+}
+
+.master-body .master-monitor {
+  position: fixed;
+  float: right;
+  right: 0px;
+}
+
+@media (max-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .master-monitor {
+    position: fixed;
+    padding-bottom: 25px;
+    width: 100%;
+  }
+}
+@media (max-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .master-monitor {
+    position: fixed;
+    padding-bottom: 25px;
+    width: 100%;
+  }
+}
+@media (max-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .master-monitor {
+    position: fixed;
+    padding-bottom: 25px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .master-monitor {
+    position: fixed;
+    /* padding-bottom: 25px; */
+    bottom: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .master-monitor {
+    position: fixed;
+    /* padding-bottom: 25px; */
+    bottom: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,42 @@
+ul {
+  list-style: none;
+}
+
+.controller-master {
+  position: fixed;
+  padding: 1rem 1rem;
+}
+
+.controller-heading {
+  margin-left: 1rem;
+}
+
+.controller-heading .controls {
+  font-size: 1.4rem;
+  color: rgb(240, 241, 241);
+}
+
+.controller-heading .horizontal-line {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+.controller-text {
+  margin-left: 1rem;
+}
+
+.controller-text .events {
+  color: #bde6f1;
+}
+
+.controller-events .controller-button-text {
+  padding-left: 0.7rem;
+  color: #bde6f1;
+}
+
+.controller-li {
+  display: flex;
+}
