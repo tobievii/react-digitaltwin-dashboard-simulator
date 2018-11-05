@@ -7,9 +7,9 @@ import "./Telemetry.css";
 const telemetry = props => {
   return (
     <div className="telemetry-master">
-      <Temperature />
-      <Humidity />
-      <WindSpeed />
+      <Temperature temperature={props.t} />
+      <Humidity humidity={props.h} />
+      <WindSpeed windspeed={props.w} />
     </div>
   );
 };

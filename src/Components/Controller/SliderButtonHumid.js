@@ -1,15 +1,10 @@
 import React, { Component } from "react";
 import "./SliderButton.css";
 
-class SliderButton extends Component {
-  state = {
-    clicked: false
-  };
-
+class SliderButtonHumid extends Component {
   handleChange = () => {
-    this.setState(prevState => {
-      return { clicked: !prevState.clicked };
-    });
+    let currState = !this.props.buttonChecked;
+    this.props.onHumidityToggle("humidity", currState);
   };
 
   render() {
@@ -18,7 +13,7 @@ class SliderButton extends Component {
         <label className="switch">
           <input
             type="checkbox"
-            defaultChecked={this.state.clicked}
+            defaultChecked={this.props.buttonChecked}
             onChange={this.handleChange}
           />
           <span className="event-slider round" />
@@ -28,4 +23,4 @@ class SliderButton extends Component {
   }
 }
 
-export default SliderButton;
+export default SliderButtonHumid;
