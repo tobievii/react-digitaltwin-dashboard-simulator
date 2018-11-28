@@ -3,8 +3,9 @@ import "./SliderButton.css";
 
 class SliderButtonWind extends Component {
   handleChange = () => {
-    let currState = !this.props.buttonChecked;
-    this.props.onWindSpeedToggle("windspeed", currState);
+    let currState = !this.props.buttonChecked,
+      imgSrcAttribute = "alarming";
+    this.props.onWindSpeedToggle("windspeed", currState, imgSrcAttribute);
   };
 
   render() {

@@ -4,18 +4,17 @@ import SlBtnHumid from "./SliderButtonHumid";
 import SlBtnWind from "./SliderButtonWind";
 import "./Controller.css";
 
-// const controller = props => {
 class Controller extends Component {
-  handleChangedValue = (attr, eventValue) => {
+  handleChangedValue = (attr, eventValue, imgSrc) => {
     let currentEvent = eventValue;
-    this.props.handleAttributes(attr, currentEvent);
+    this.props.handleAttributes(attr, currentEvent, imgSrc);
   };
 
   render() {
     return (
       <div className="controller-master">
         <div className="controller-heading">
-          <p className="controls">CONTROLS</p>{" "}
+          <p className="controls">CONTROLS</p>
           <hr className="horizontal-line" />
         </div>
         <div className="controller-text">

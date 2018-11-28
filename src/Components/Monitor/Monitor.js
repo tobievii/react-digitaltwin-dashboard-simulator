@@ -10,7 +10,7 @@ const Monitor = props => {
     <div className="monitor-master">
       <Clock />
       <Status />
-      <DeviceDetails />
+      <DeviceDetails hexBrkr={props.dIdBrkr} hexHash={props.dIdHash} />
       <Telemetry t={props.tempV} h={props.humidV} w={props.windV} />
     </div>
   );

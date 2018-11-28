@@ -3,9 +3,6 @@ import PowerButton from "./PowerButton";
 import "./Status.css";
 
 class Status extends Component {
-  state = {
-    active: true
-  };
   render() {
     return (
       <div className="status-master">

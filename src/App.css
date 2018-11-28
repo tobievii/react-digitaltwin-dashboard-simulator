@@ -1,17 +1,30 @@
 .master-body {
-  display: block;
+  width: 100%;
+  /* display: block; */
 }
 
 .master-body .master-controller {
-  position: fixed;
+  width: 30%;
+  /* position: fixed; */
   float: left;
   left: 0px;
 }
 
 .master-body .master-monitor {
+  width: 30%;
   position: fixed;
-  float: right;
+  float: left;
+  /* float: right; */
   right: 0px;
+}
+
+.master-body .master-hvac {
+  /* position: fixed; */
+  width: 40%;
+  padding-left: 300px;
+  float: left;
+  /* width: 200px; */
+  margin: 0 auto;
 }
 
 @media (max-width: 320px) {

@@ -4,17 +4,23 @@ import SideDrawer from "./Components/Navbar/SideDrawer/SideDrawer";
 import BackDrop from "./Components/Navbar/Backdrop/Backdrop";
 import Controller from "./Components/Controller/Controller";
 import Monitor from "./Components/Monitor/Monitor";
+import Hvac from "./Components/Hvac/Hvac";
 import "./App.css";
+import hvacGreen from "./HVAC_simulator_running_green.gif";
+import hvacRed from "./HVAC_simulator_running_red.gif";
 
 class App extends Component {
   state = {
+    deviceIdBroker: "9C7HSWT-882UQF0C-",
+    deviceIdHash: "-WVJCJTK47",
     sideDrawerOpen: false,
     tempChecker: false,
     humidityChecker: false,
     windSpeedChecker: false,
     temp: 65.3,
     humid: 77.8,
-    wind: 48.4
+    wind: 48.4,
+    imgSrcHvac: hvacGreen
   };
 
   drawerToggleClickHandler = () => {
@@ -27,7 +33,7 @@ class App extends Component {
     this.setState({ sideDrawerOpen: false });
   };
 
-  handleAttr = (attrName, value) => {
+  handleAttr = (attrName, value, imgSrcValue) => {
     if (attrName === "temperature" && value === true) {
       this.setState(prevState => {
         return {
@@ -56,18 +62,24 @@ class App extends Component {
           humid: prevState.humid + 4
         };
       });
-    } else if (attrName === "windspeed" && value === true) {
+    } else if (
+      attrName === "windspeed" &&
+      value === true &&
+      imgSrcValue === "alarming"
+    ) {
       this.setState(prevState => {
         return {
           windSpeedChecker: value,
-          wind: prevState.wind + 5.2
+          wind: prevState.wind + 5.2,
+          imgSrcHvac: hvacRed
         };
       });
     } else if (attrName === "windspeed" && value === false) {
       this.setState(prevState => {
         return {
           windSpeedChecker: false,
-          wind: prevState.wind - 5.2
+          wind: prevState.wind - 5.2,
+          imgSrcHvac: hvacGreen
         };
       });
     }
@@ -93,8 +105,13 @@ class App extends Component {
                 btnStateWind={this.state.windSpeedChecker}
               />
             </div>
+            <div className="master-hvac">
+              <Hvac imgSrcHvac={this.state.imgSrcHvac} />
+            </div>
             <div className="master-monitor">
               <Monitor
+                dIdBrkr={this.state.deviceIdBroker}
+                dIdHash={this.state.deviceIdHash}
                 tempV={this.state.temp}
                 humidV={this.state.humid}
                 windV={this.state.wind}
